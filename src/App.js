@@ -3,6 +3,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import Navbar from './compoents/Navbar';
+import Book from './compoents/Book';
 
 function Layout() {
   return (
@@ -18,7 +19,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<h1>Books</h1>} />
+          <Route index element={<Book title="book1" author="Barry"/>} />
           <Route path="categories" element={<h1>catagories</h1>} />
           <Route path="*" element={<div>Not found</div>} />
         </Route>
