@@ -2,10 +2,12 @@ import {
   BrowserRouter, Routes, Route, Outlet,
 } from 'react-router-dom';
 import './App.css';
+import Navbar from './compoents/Navbar';
 
 function Layout() {
   return (
     <>
+      <Navbar />
       <Outlet />
     </>
   );
@@ -17,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<h1>Books</h1>} />
-          <Route path="catagories" element={<h1>catagories</h1>} />
+          <Route path="categories" element={<h1>catagories</h1>} />
           <Route path="*" element={<div>Not found</div>} />
         </Route>
       </Routes>
