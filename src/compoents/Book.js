@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types'; // eslint-disable-line import/no-extraneous-dependencies
 import Form from './Form';
 
 const Book = ({ title, author }) => (
@@ -11,5 +11,10 @@ const Book = ({ title, author }) => (
     <Form />
   </>
 );
+
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+};
 
 export default Book;
