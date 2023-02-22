@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'; // eslint-disable-line import/no-extraneous-dependencies
+import PropTypes from 'prop-types';
 import Form from './Form';
 
 const Book = ({ title, author }) => (
