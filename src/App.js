@@ -1,19 +1,10 @@
 import {
-  BrowserRouter, Routes, Route, Outlet,
+  BrowserRouter, Routes, Route,
 } from 'react-router-dom';
 import './App.css';
-import Navbar from './compoents/Navbar';
+import Layout from './compoents/Layout';
 import Book from './compoents/Book';
 import Categories from './compoents/Categories';
-
-function Layout() {
-  return (
-    <>
-      <Navbar />
-      <Outlet />
-    </>
-  );
-}
 
 function App() {
   return (
