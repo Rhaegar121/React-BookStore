@@ -1,20 +1,17 @@
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import Form from './Form';
+import BookCard from './BookCard';
 
-const Book = ({ title, author }) => (
-  <>
-    <div>
-      <p>{title}</p>
-      <p>{author}</p>
-      <button type="button">Remove</button>
-    </div>
-    <Form />
-  </>
-);
-
-Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+const Book = () => {
+  const books = useSelector((state) => state.books);
+  return (
+    <>
+      <div>
+        {books.map((book) => <BookCard key={book.item_id} book={book} />)}
+      </div>
+      <Form />
+    </>
+  );
 };
 
 export default Book;
