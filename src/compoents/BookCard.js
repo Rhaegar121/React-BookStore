@@ -8,10 +8,6 @@ const BookCard = ({ book }) => (
       Author:
       <span>{book.author}</span>
     </span>
-    <span>
-      Category:
-      <span>{book.category}</span>
-    </span>
     <button type="button">remove</button>
   </div>
 );

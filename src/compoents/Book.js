@@ -3,8 +3,7 @@ import Form from './Form';
 import BookCard from './BookCard';
 
 const Book = () => {
-  const { books } = useSelector((state) => state.books);
-  // console.log(title);
+  const books = useSelector((state) => state.books);
   return (
     <>
       <div>
