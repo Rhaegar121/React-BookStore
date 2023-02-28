@@ -6,9 +6,9 @@ import { addBook } from '../redux/books/booksSlice';
 const Form = () => {
   const [bookTitle, setBookTitle] = useState('');
   const [bookAuthor, setBookAuthor] = useState('');
-  // const [bookCategory, setBookCategory] = useState('category');
 
   const dispatch = useDispatch();
+
   const handleInputTitle = (e) => {
     setBookTitle(e.target.value);
   };
@@ -17,22 +17,16 @@ const Form = () => {
     setBookAuthor(e.target.value);
   };
 
-  // const handleInputCategory = (e) => {
-  //   setBookCategory(e.target.value);
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBook = {
       item_id: uuidv4(),
       title: bookTitle,
       author: bookAuthor,
-      // category: bookCategory,
     };
     dispatch(addBook(newBook));
     setBookTitle('');
     setBookAuthor('');
-    // setBookCategory('');
   };
 
   return (

@@ -45,5 +45,12 @@ const addBook = (book) => ({
   },
 });
 
-export { addBook };
+const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  payload: {
+    item_id: id,
+  },
+});
+
+export { addBook, removeBook };
 export default booksReducer;
