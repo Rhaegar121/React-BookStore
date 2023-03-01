@@ -42,7 +42,14 @@ const Form = () => {
       <form>
         <input type="text" placeholder="Title" onChange={handleInputTitle} value={bookTitle} required />
         <input type="text" placeholder="Author" onChange={handleInputAuthor} value={bookAuthor} required />
-        <input type="text" placeholder="Category" onChange={handleInputCategory} value={bookCategory} required />
+        <select onChange={handleInputCategory} value={bookCategory} required>
+          <option value="">Select Category</option>
+          <option value="Action">Action</option>
+          <option value="Classic">Classic</option>
+          <option value="Romance">Romance</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Unknown">Unknown</option>
+        </select>
         <button type="submit" onClick={handleSubmit}>Add</button>
       </form>
     </div>
