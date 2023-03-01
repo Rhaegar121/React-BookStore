@@ -4,18 +4,18 @@ import { v4 as uuidv4 } from 'uuid';
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/vGqwwjT4O4Gm9D3HZMDv/books';
 
 export const fetchBook = createAsyncThunk('fetchBook', async () => {
-  const booksResult = await fetch(url);
-  const bookData = await booksResult.json();
-  const Book = [];
-  Object.keys(bookData).forEach((key) => {
-    Book.push({
+  const res = await fetch(url);
+  const data = await res.json();
+  const bookList = [];
+  Object.keys(data).forEach((key) => {
+    bookList.push({
       item_id: key,
-      title: bookData[key][0].title,
-      author: bookData[key][0].author,
-      category: bookData[key][0].category,
+      title: data[key][0].title,
+      author: data[key][0].author,
+      category: data[key][0].category,
     });
   });
-  return Book;
+  return bookList;
 });
 
 export const addBook = createAsyncThunk('addBook', async (book) => {
