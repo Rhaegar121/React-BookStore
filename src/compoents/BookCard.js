@@ -2,7 +2,6 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 
 const BookCard = ({ book }) => {
-  // console.log(book);
   const dispatch = useDispatch();
   return (
     <div>
