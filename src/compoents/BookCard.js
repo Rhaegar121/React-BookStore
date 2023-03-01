@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 
 const BookCard = ({ book }) => {
+  // console.log(book);
   const dispatch = useDispatch();
   return (
     <div>
@@ -12,6 +13,10 @@ const BookCard = ({ book }) => {
       <span>
         Author:
         <span>{book.author}</span>
+      </span>
+      <span>
+        Category:
+        <span>{book.category}</span>
       </span>
       <button type="button" onClick={() => { dispatch(removeBook(book.item_id)); }}>remove</button>
     </div>
