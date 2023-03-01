@@ -13,6 +13,10 @@ const BookCard = ({ book }) => {
         Author:
         <span>{book.author}</span>
       </span>
+      <span>
+        Category:
+        <span>{book.category}</span>
+      </span>
       <button type="button" onClick={() => { dispatch(removeBook(book.item_id)); }}>remove</button>
     </div>
   );

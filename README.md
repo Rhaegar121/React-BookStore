@@ -75,49 +75,62 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project you need to run:
+
+
+```sh
+ npm install
+```
+
 
 ### Setup
 
 Clone this repository to your desired folder:
-0. Install git if not already installed
-1. Use VScode: open terminal in VScode
-2. Navigate to the directory where you want clone the copy of this repository
-3. Create new directory [optional]
-4. Clone the repo using the below command
- > git clone https://github.com/Rhaegar121/React-BookStore.git
-5. Alternatively, you can download the zip file of your project by clicking on the Code button on the right side of your project page and clicking on Download ZIP
+
+
+```sh
+  cd React-BookStore
+  git clone https://github.com/Rhaegar121/React-BookStore
+```
 
 ### Install
 
-In the project directory, you can run:
+Install this project with:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```sh
+  cd React-BookStore
+  node version 16 or higher
+```
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### Usage
 
-This project can be used to learn and practice basics of React.js. Specifically;
-* React components.
-* React Events.
-* Refactor with hooks.
-> #### Getting Started with Create React App
-> - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run the project, execute the following command:
+
+
+```
+  npm start
+```
+
+### Testing
+
+To run the project, execute the following command:
+
+```
+  npm run test
+```
+
+### Deployment
+
+You can deploy this project using:
+
+- GitHub Pages
+- Netlify
+- Heroku
+- Cyclic
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
