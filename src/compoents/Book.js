@@ -18,7 +18,7 @@ const Book = () => {
 
   return (
     <>
-      <div>
+      <div className="book">
         {books.map((book) => <BookCard key={book.item_id} book={book} />)}
       </div>
       <Form />
