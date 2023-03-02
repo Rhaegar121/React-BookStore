@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ImUser } from 'react-icons/im';
 
 const Navbar = () => (
   <nav className="navbar">
@@ -7,7 +8,7 @@ const Navbar = () => (
       <span><Link to="/">Books</Link></span>
       <span><Link to="/categories">Categories</Link></span>
     </div>
-    <div className="user">user</div>
+    <div className="user"><ImUser /></div>
   </nav>
 );
 
