@@ -15,6 +15,13 @@ const BookCard = ({ book }) => {
           <button type="button">Edit</button>
         </div>
       </div>
+      <div className="progress">
+        <div className="progress-bar" />
+        <div className="progress-text">
+          <p>64%</p>
+          <p>completed</p>
+        </div>
+      </div>
     </div>
   );
 };
