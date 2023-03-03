@@ -26,13 +26,20 @@ body {
   --azure: #0290ff;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.813rem 6.25rem;
   font-family: 'Montserrat', sans-serif;
+  padding: 1.813rem 6.25rem;
+  margin: 0 0 2.375rem;
+  background-color: var(--white-two);
+  border-bottom: solid 1px var(--white);
 }
 
 .navbar .navLink {
@@ -67,7 +74,6 @@ h1 {
 /* book */
 .book {
   width: 100%;
-  padding: 0px 6.25rem;
   margin: 2.5rem auto;
   display: flex;
   flex-direction: column;
@@ -78,17 +84,21 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 10.625rem;
+  margin: 0 6.25rem;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
 }
 
 .book-detail {
-  padding-left: 1.688rem;
   text-transform: capitalize;
 }
 
 .book-detail .category {
   width: 3.063rem;
   height: 1.125rem;
-  margin: 2rem 2.438rem 0 0;
   opacity: 0.5;
   font-size: 0.875rem;
   font-weight: bold;
@@ -103,7 +113,7 @@ h1 {
 .book-detail .title {
   width: 12.313rem;
   height: 1.813rem;
-  margin: 0.188rem 20.188rem 0 0;
+  margin: 0.188rem 12rem 0 0;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -116,7 +126,6 @@ h1 {
 .book-detail .author {
   width: 6.688rem;
   height: 1.188rem;
-  margin: 0.25rem 0 0;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -163,7 +172,16 @@ h1 {
   display: flex;
   align-items: center;
   gap: 1.313rem;
-  border-right: 1px solid var(--white);
+  position: relative;
+}
+
+.progress::after {
+  content: '';
+  position: absolute;
+  width: 0.125rem;
+  height: 4.375rem;
+  right: -60%;
+  background-color: var(--white);
 }
 
 .progress .progress-bar {
@@ -205,4 +223,48 @@ h1 {
   opacity: 0.5;
   font-size: 0.875rem;
 }
+
+.chapter .current-chapter {
+  width: 7.875rem;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 0.438rem;
+  color: var(--black-two);
+}
+
+.chapter .chapter-title {
+  width: 4.688rem;
+  height: 1.313rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  margin-bottom: 1.438rem;
+  color: var(--black-two);
+}
+
+.chapter .update-btn {
+  width: 11.5rem;
+  height: 2.063rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  font-size: 0.813rem;
+  font-weight: 300;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--white-two);
+  background-color: var(--azure);
+  border: none;
+}
+
 

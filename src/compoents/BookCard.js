@@ -19,8 +19,13 @@ const BookCard = ({ book }) => {
         <div className="progress-bar" />
         <div className="progress-text">
           <p>64%</p>
-          <p>completed</p>
+          <p>Completed</p>
         </div>
+      </div>
+      <div className="chapter">
+        <p className="current-chapter">Current Chapter</p>
+        <p className="chapter-title">Chapter 17</p>
+        <button type="button" className="update-btn">Update Progress</button>
       </div>
     </div>
   );
