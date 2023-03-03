@@ -284,15 +284,11 @@ h1 {
 }
 
 .form h2 {
-  width: 10.875rem;
-  height: 1.5rem;
   margin-bottom: 1.188rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
+  text-transform: uppercase;
   letter-spacing: -0.18px;
   color: #888;
 }
