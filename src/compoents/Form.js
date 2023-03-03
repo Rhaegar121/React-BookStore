@@ -37,12 +37,24 @@ const Form = () => {
   };
 
   return (
-    <div>
-      <h1>Add new book</h1>
+    <div className="form">
+      <h2>Add new book</h2>
       <form>
-        <input type="text" placeholder="Title" onChange={handleInputTitle} value={bookTitle} required />
-        <input type="text" placeholder="Author" onChange={handleInputAuthor} value={bookAuthor} required />
-        <select onChange={handleInputCategory} value={bookCategory} required>
+        <input
+          type="text"
+          placeholder="Title"
+          onChange={handleInputTitle}
+          value={bookTitle}
+          required
+        />
+        <input
+          type="text"
+          placeholder="Author"
+          onChange={handleInputAuthor}
+          value={bookAuthor}
+          required
+        />
+        <select onChange={handleInputCategory} value={bookCategory} placeholder="Category" required>
           <option value="">Select Category</option>
           <option value="Action">Action</option>
           <option value="Classic">Classic</option>
@@ -50,7 +62,9 @@ const Form = () => {
           <option value="Science Fiction">Science Fiction</option>
           <option value="Unknown">Unknown</option>
         </select>
-        <button type="submit" onClick={handleSubmit}>Add</button>
+        <button type="submit" onClick={handleSubmit} className="add-btn">
+          ADD BOOK
+        </button>
       </form>
     </div>
   );
