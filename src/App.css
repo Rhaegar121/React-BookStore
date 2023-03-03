@@ -36,7 +36,7 @@ button {
   align-items: center;
   font-family: 'Montserrat', sans-serif;
   padding: 1.813rem 6.25rem;
-  margin: 0 0 2.375rem;
+  margin-bottom: 2.375rem;
   background-color: var(--white-two);
   border-bottom: solid 1px var(--white);
 }
@@ -62,7 +62,7 @@ h1 {
 }
 
 .navbar .navLink span:nth-child(3) {
-  opacity: 50% !important;
+  opacity: 50%;
 }
 
 .navbar .user {
@@ -102,10 +102,6 @@ h1 {
   opacity: 0.5;
   font-size: 0.875rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   font-family: 'Montserrat', sans-serif;
   color: var(--black-two);
 }
@@ -116,9 +112,6 @@ h1 {
   margin-top: 0.188rem;
   font-size: 1.375rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.2px;
   color: var(--black-two);
 }
@@ -128,10 +121,6 @@ h1 {
   height: 1.188rem;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: var(--cool-blue);
 }
 
@@ -229,10 +218,6 @@ h1 {
   font-size: 0.813rem;
   font-weight: 300;
   text-transform: uppercase;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   margin-bottom: 0.438rem;
   color: var(--black-two);
 }
@@ -242,9 +227,6 @@ h1 {
   height: 1.313rem;
   font-size: 1rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.4px;
   margin-bottom: 1.438rem;
   color: var(--black-two);
@@ -291,6 +273,7 @@ h1 {
   width: 25rem;
   height: 2.813rem;
   padding-left: 1.063rem;
+  outline: none;
   border-radius: 4px;
   border: solid 1px var(--white);
   background-color: var(--white-two);
