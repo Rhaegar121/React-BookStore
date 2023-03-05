@@ -5,7 +5,7 @@ import Form from './Form';
 import BookCard from './BookCard';
 
 const Book = () => {
-  let books = useSelector((state) => state.books).book;
+  let books = useSelector((state) => state.books);
   if (books === null || books === undefined) {
     books = [];
   }

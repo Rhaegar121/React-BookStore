@@ -6,15 +6,14 @@ const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstor
 export const fetchBook = createAsyncThunk('fetchBook', async () => {
   const res = await fetch(url);
   const data = await res.json();
-  const bookList = [];
-  Object.keys(data).forEach((key) => {
-    bookList.push({
+  const bookList = Object.keys(data).map((key) => (
+    {
       item_id: key,
       title: data[key][0].title,
       author: data[key][0].author,
       category: data[key][0].category,
-    });
-  });
+    }
+  ));
   return bookList;
 });
 
@@ -49,17 +48,12 @@ const booksSlice = createSlice({
   initialState: [],
   extraReducers: (builder) => {
     builder
-      .addCase(fetchBook.fulfilled, (state, action) => ({
-        ...state,
-        book: [...action.payload],
-      }))
+      .addCase(fetchBook.fulfilled, (state, action) => action.payload)
       .addCase(addBook.fulfilled, (state, action) => {
-        state.book.push(action.payload);
+        state.push(action.payload);
       })
-      .addCase(removeBook.fulfilled, (state, action) => ({
-        ...state,
-        book: state.book.filter((book) => book.item_id !== action.payload),
-      }));
+      .addCase(removeBook.fulfilled, (state, action) => (
+        [...state.filter((book) => book.item_id !== action.payload)]));
   },
 });
 
